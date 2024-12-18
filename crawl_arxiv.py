@@ -194,7 +194,7 @@ def save_relevant_papers_to_html(papers, relevant_indices):
 def save_relevant_papers_to_html_amend(papers, relevant_indices, task):
     # Get the current date
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
-    filename = f"{task["name"]}.html"
+    filename = f"{task['name']}.html"
 
     # Load existing HTML file if it exists
     try:
@@ -206,7 +206,7 @@ def save_relevant_papers_to_html_amend(papers, relevant_indices, task):
     # Start building the new HTML content
     new_html_content = f"""
     <div class="paper">
-        <h2>Relevant ArXiv {task["subject"]} Papers - {current_date}</h2>
+        <h2>Relevant ArXiv {task['subject']} Papers - {current_date}</h2>
     </div>
     """
 
@@ -299,7 +299,7 @@ def main():
     tasks = load_tasks("tasks/")
 
     for task in tasks:
-        print(f"Crawling task: {task["name"]}")
+        print(f"Crawling task: {task['name']}")
         execute_crawl_task(task)
 
     print("Done.")
