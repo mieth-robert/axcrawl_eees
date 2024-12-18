@@ -1,5 +1,5 @@
 {
-    "name": "arxiv_quant_lm",
-    "subject": "quant-ph",
+    "name": "arxiv_cond-mat_lm",
+    "subject": "cond-mat",
     "request": "Papers that are related to quantum chemistry, specifically light matter interaction, polaritonics, strong light-matter coupling, quantum optics, quantum information science, or electrostaic catalysis. Also cavity quantum electro dynamics."
 }
