@@ -34,7 +34,7 @@ jobs:
       env:
         OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
       run: |
-        python crawl_arxiv_eees.py
+        python crawl_arxiv.py
 
     - name: Commit and Push Changes
       if: success()
