@@ -2,14 +2,15 @@ import os
 import requests
 from bs4 import BeautifulSoup
 import datetime
+import json
 import openai
 
 # Replace with your OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
 
-def fetch_arxiv_eess_new():
+def fetch_arxiv_new(subject):
     # Define the URL for ArXiv eess new submissions
-    url = "https://arxiv.org/list/eess/new"
+    url = f"https://arxiv.org/list/{subject}/new"
     
     # Fetch the content of the webpage
     response = requests.get(url)
@@ -44,10 +45,23 @@ def load_selection_prompt(filename):
     with open(filename, "r") as file:
         return file.read().strip()
     
-def load_selection_prompt(filename):
-    with open(filename, "r") as file:
-        return file.read().strip()
+def load_tasks(folder_path):
+    json_data_list = []
 
+    # Iterate over all files in the folder
+    for filename in os.listdir(folder_path):
+        if filename.endswith('.json'):  
+            file_path = os.path.join(folder_path, filename)
+            try:
+                with open(file_path, 'r', encoding='utf-8') as file:
+                    # Load JSON content and append to the list
+                    json_data = json.load(file)
+                    json_data_list.append(json_data)
+            except Exception as e:
+                print(f"Error reading {filename}: {e}")
+
+    return json_data_list
+    
 def check_paper_with_gpt(paper, selection_prompt):
     query = f"""
     Selection criteria:
@@ -177,10 +191,10 @@ def save_relevant_papers_to_html(papers, relevant_indices):
 
     print(f"Relevant papers saved to {filename}.")
 
-def save_relevant_papers_to_html_amend(papers, relevant_indices):
+def save_relevant_papers_to_html_amend(papers, relevant_indices, task):
     # Get the current date
     current_date = datetime.datetime.now().strftime("%Y-%m-%d")
-    filename = f"arxiv_eess.html"
+    filename = f"{task["name"]}.html"
 
     # Load existing HTML file if it exists
     try:
@@ -192,7 +206,7 @@ def save_relevant_papers_to_html_amend(papers, relevant_indices):
     # Start building the new HTML content
     new_html_content = f"""
     <div class="paper">
-        <h2>Relevant ArXiv eess Papers - {current_date}</h2>
+        <h2>Relevant ArXiv {task["subject"]} Papers - {current_date}</h2>
     </div>
     """
 
@@ -254,23 +268,21 @@ def save_relevant_papers_to_html_amend(papers, relevant_indices):
 
     print(f"Relevant papers saved to {filename}.")
 
-def main():
+def execute_crawl_task(task):
     print("Fetching ArXiv eess new submissions...")
-    papers = fetch_arxiv_eess_new()
+    papers = fetch_arxiv_new(task["subject"])
     if not papers:
         print("No papers were fetched.")
         return
     print(f"{len(papers)} papers were fetched.")
 
     print("Loading selection criteria...")
-    selection_prompt = load_selection_prompt("selection_request.txt")
+    selection_prompt = task["request"]
 
     print("Querying ChatGPT for relevant papers...")
     relevant_papers = get_relevant_papers_with_gpt(papers, selection_prompt)
     relevant_papers_list = [int(paper_num)-1 for paper_num in relevant_papers.split(",")]
     
-    print(relevant_papers_list)
-
     print(f"\nFound {len(relevant_papers_list)} matching papers.")
     for i in relevant_papers_list:
         paper = papers[i]
@@ -280,7 +292,17 @@ def main():
         print(f"Abstract: {paper['abstract']}")
 
     print("Saving to file.")
-    save_relevant_papers_to_html_amend(papers, relevant_papers_list)
+    save_relevant_papers_to_html_amend(papers, relevant_papers_list, task)
+
+def main():
+    print("Loading tasks")
+    tasks = load_tasks("tasks/")
+
+    for task in tasks:
+        print(f"Crawling task: {task["name"]}")
+        execute_crawl_task(task)
+
+    print("Done.")
 
 if __name__ == "__main__":
     main()
