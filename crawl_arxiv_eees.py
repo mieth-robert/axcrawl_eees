@@ -280,7 +280,6 @@ def main():
         print(f"Abstract: {paper['abstract']}")
 
     print("Saving to file.")
-    save_relevant_papers_to_file(papers, relevant_papers_list)
     save_relevant_papers_to_html_amend(papers, relevant_papers_list)
 
 if __name__ == "__main__":
