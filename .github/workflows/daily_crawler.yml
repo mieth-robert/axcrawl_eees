@@ -3,7 +3,7 @@ name: Run ArXiv Crawler Daily
 # Schedule to run every day at midnight UTC
 on:
   schedule:
-    - cron: '0 5 * * *' # Run daily at midnight Eastern Time (5 a.m. UTC)
+    - cron: '0 5 * * 1-5' # Run weekdays at midnight Eastern Time (5 a.m. UTC)
 
   # Allow manual triggering of the workflow
   workflow_dispatch:
