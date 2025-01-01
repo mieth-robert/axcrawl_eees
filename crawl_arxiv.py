@@ -4,6 +4,7 @@ from bs4 import BeautifulSoup
 import datetime
 import json
 import openai
+import re
 
 # Replace with your OpenAI API key
 openai.api_key = os.getenv("OPENAI_API_KEY")
@@ -90,22 +91,27 @@ def check_paper_with_gpt(paper, selection_prompt):
         print(f"Error querying OpenAI API: {e}")
         return False
     
-def get_relevant_papers_with_gpt(papers, selection_prompt):
+def get_relevant_papers_with_gpt(papers, task):
     # Create a combined query with all papers
     papers_text = "\n\n".join([
-        f"Paper {i+1}:\nTitle: {paper['title']}\nAuthors: {paper['authors']}\nAbstract: {paper['abstract']}"
+        f"Paper number {i+1}:\nTitle: {paper['title']}\nAuthors: {paper['authors']}\nAbstract: {paper['abstract']}"
         for i, paper in enumerate(papers)
     ])
     
     query = f"""
     Selection criteria:
-    {selection_prompt}
+    {task['request']}
 
-    Below is a list of papers. For each paper, indicate if it matches the criteria. Respond with a list of the numbers of the matching papers. Only write the numbers separated by commas.
+    Below is a list of papers. For each paper, indicate if it matches the criteria. 
+    Respond with a list of the numbers of the matching papers.
+    Only write the numbers separated by commas. 
+    You should not respond with numbers that are not in the paper list. 
 
     {papers_text}
     """
-    
+    with open(f"query_{task['name']}.txt", "w") as file:
+        file.write(query)
+
     try:
         response = openai.chat.completions.create(
             model="gpt-4o-mini",
@@ -280,16 +286,24 @@ def execute_crawl_task(task):
     selection_prompt = task["request"]
 
     print("Querying ChatGPT for relevant papers...")
-    relevant_papers = get_relevant_papers_with_gpt(papers, selection_prompt)
-    relevant_papers_list = [int(paper_num)-1 for paper_num in relevant_papers.split(",")]
+    relevant_papers = get_relevant_papers_with_gpt(papers, task)
+    print("Relevant papers query result:")
+    print(relevant_papers)
+
+    # Clean up the string
+    relevant_papers = re.sub(r"[^\d,]", "", relevant_papers)  # Remove anything that is not a digit or comma
+    relevant_papers = re.sub(r",+", ",", relevant_papers)  # Replace multiple commas with a single comma
+    relevant_papers = relevant_papers.strip(",")  # Remove leading/trailing commas
+    relevant_papers_list = [int(paper_num)-1 for paper_num in relevant_papers.split(",") if 0<= int(paper_num)-1 < len(papers)] # split
     
-    print(f"\nFound {len(relevant_papers_list)} matching papers.")
-    for i in relevant_papers_list:
-        paper = papers[i]
-        print(f"\nPaper {i}:")
-        print(f"Title: {paper['title']}")
-        print(f"Authors: {paper['authors']}")
-        print(f"Abstract: {paper['abstract']}")
+    
+    # print(f"\nFound {len(relevant_papers_list)} matching papers.")
+    # for i in relevant_papers_list:
+    #     paper = papers[i]
+    #     print(f"\nPaper {i}:")
+    #     print(f"Title: {paper['title']}")
+    #     print(f"Authors: {paper['authors']}")
+    #     print(f"Abstract: {paper['abstract']}")
 
     print("Saving to file.")
     save_relevant_papers_to_html_amend(papers, relevant_papers_list, task)
