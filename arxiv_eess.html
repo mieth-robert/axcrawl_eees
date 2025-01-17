@@ -14,6 +14,45 @@
     <body>
     
     <div class="paper">
+        <h2>Relevant ArXiv eess Papers - 2025-01-17</h2>
+    </div>
+    
+        <div class="paper">
+            <h2>Reducing real-time complexity via sub-control Lyapunov functions: from theory to experiments</h2>
+            <p><strong>Authors:</strong> Huu-Thinh Do, Franco Blanchini, Stefano Miani, Ionela Prodan</p>
+            <p>The techniques to design control Lyapunov functions (CLF), along with a proper stabilizing feedback, possibly in the presence of constraints, often provide control laws that are too complex for proper implementation online, especially when an optimization problem is involved. In this work, we show how to acquire an alternative, computationally attractive feedback. Given a nominal CLF and a nominal state feedback, we say that a different positive definite function is a Sub-control Lyapunov function (SCLF) if its Lyapunov derivative is negative-definite and bounded above by the Lyapunov derivative of the nominal function with the nominal control. It turns out that if we consider a family of basis functions, then a SCLF can be computed by linear programming, with an infinite number of constraints. The idea is that although the offline computational burden to achieve the new controller and solve the linear program is considerable, the online computational burden is drastically reduced. Comprehensive simulations and experiments on drone control are conducted to demonstrate the effectiveness of the study.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Hierarchical Deep Reinforcement Learning for Adaptive Resource Management in Integrated Terrestrial and Non-Terrestrial Networks</h2>
+            <p><strong>Authors:</strong> Muhammad Ahmed Mohsin, Hassan Rizwan, Muhammad Umer, Sagnik Bhattacharya, Ahsan Bilal, John M. Cioffi</p>
+            <p>Efficient spectrum allocation has become crucial as the surge in wireless-connected devices demands seamless support for more users and applications, a trend expected to grow with 6G. Innovations in satellite technologies such as SpaceX's Starlink have enabled non-terrestrial networks (NTNs) to work alongside terrestrial networks (TNs) and allocate spectrum based on regional demands. Existing spectrum sharing approaches in TNs use machine learning for interference minimization through power allocation and spectrum sensing, but the unique characteristics of NTNs like varying orbital dynamics and coverage patterns require more sophisticated coordination mechanisms. The proposed work uses a hierarchical deep reinforcement learning (HDRL) approach for efficient spectrum allocation across TN-NTN networks. DRL agents are present at each TN-NTN hierarchy that dynamically learn and allocate spectrum based on regional trends. This framework is 50x faster than the exhaustive search algorithm while achieving 95\% of optimum spectral efficiency. Moreover, it is 3.75x faster than multi-agent DRL, which is commonly used for spectrum sharing, and has a 12\% higher overall average throughput.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Power-Efficient RAN Intelligent Controllers Through Optimized KPI Monitoring</h2>
+            <p><strong>Authors:</strong> João Paulo S. H. Lima, George N. Katsaros, Konstantinos Nikitopoulos</p>
+            <p>The Open Radio Access Network (RAN) paradigm envisions a more flexible, interoperable, and intelligent RAN ecosystem via new open interfaces and elements like the RAN Intelligent Controller (RIC). However, the impact of these elements on Open RAN's power consumption remains heavily unexplored. This work for the first time evaluates the impact of Key Performance Indicator (KPI) monitoring on RIC's power consumption using real traffic and power measurements. By analyzing various RIC-RAN communication scenarios, we identify that RIC's power consumption can become a scalability bottleneck, particularly in large-scale deployments, even when RIC is limited to its core operational functionalities and without incorporating application-specific processes. In this context, also for the first time we explore potential power savings through the elimination of redundant KPI transmissions, extending existing techniques for identical subscription removal and KPI selection, achieving significant power consumption gains exceeding 87\% of the overall RIC power consumption.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>A Dataset Generation Toolbox for Dynamic Security Assessment: On the Role of the Security Boundary</h2>
+            <p><strong>Authors:</strong> Bastien Giraud, Lola Charles, Agnes Marjorie Nakiganda, Johanna Vorwerk, Spyros Chatzivasileiadis</p>
+            <p>Dynamic security assessment (DSA) is crucial for ensuring the reliable operation of power systems. However, conventional DSA approaches are becoming intractable for future power systems, driving interest in more computationally efficient data-driven methods. Efficient dataset generation is a cornerstone of these methods. While importance and generic sampling techniques often focus on operating points near the system's security boundary, systematic methods for sampling in this region remain scarce. Furthermore, the impact of sampling near the security boundary on the performance of data-driven DSA methods has yet to be established. This paper highlights the critical role of accurately capturing security boundaries for effective security assessment. As such, we propose a novel method for generating a high number of samples close to the security boundary, considering both AC feasibility and small-signal stability. Case studies on the PGLib-OPF 39-bus and PGLib-OPF 162-bus systems demonstrate the importance of including boundary-adjacent operating points in training datasets while maintaining a balanced distribution of secure and insecure points.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Intra-day Solar and Power Forecast for Optimization of Intraday Market Participation</h2>
+            <p><strong>Authors:</strong> Nelson Salazar-Peña, Adolfo Palma-Vergara, Mateo Montes, María Alejandra Vargas-Torres, Adriana Salinas, Andrés Velasco, Alejandra Tabares, Andrés González-Mancera</p>
+            <p>The prediction of solar irradiance enhances reliability in photovoltaic (PV) solar plant generation and grid integration. In Colombia, PV plants face penalties if energy production deviates beyond governmental thresholds from intraday market offers. This research employs Long Short-Term Memory (LSTM) and Bidirectional-LSTM (Bi-LSTM) models, utilizing meteorological data from a PV plant in El Paso, Cesar, Colombia, to predict solar irradiance with a 6-hour horizon and 10-minute resolution. While Bi-LSTM showed superior performance, the LSTM model achieved comparable results with significantly reduced training time (6 hours versus 18 hours), making it computationally advantageous. The LSTM predictions were averaged to create an hourly resolution model, evaluated using Mean Absolute Error, Root-Mean-Square Error, Normalized Root-Mean-Square Error, and Mean Absolute Percentage Error metrics. Comparison with the Global Forecast System (GFS) revealed similar performance, with both models effectively capturing daily solar irradiance patterns. The forecast model integrates with an Object-Oriented power production model, enabling accurate energy offers in the intraday market while minimizing penalty costs.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Quantum Annealing based Power Grid Partitioning for Parallel Simulation</h2>
+            <p><strong>Authors:</strong> Carsten Hartmann, Junjie Zhang, Carlos D. Gonzalez Calaza, Thiemo Pesch, Kristel Michielsen, Andrea Benigni</p>
+            <p>Graph partitioning has many applications in powersystems from decentralized state estimation to parallel simulation. Focusing on parallel simulation, optimal grid partitioning minimizes the idle time caused by different simulation times for the sub-networks and their components and reduces the overhead required to simulate the cuts. Partitioning a graph into two parts such that, for example, the cut is minimal and the subgraphs have equal size is an NP-hard problem. In this paper we show how optimal partitioning of a graph can be obtained using quantum annealing (QA). We show how to map the requirements for optimal splitting to a quadratic unconstrained binary optimization (QUBO) formulation and test the proposed formulation using a current D-Wave QPU. We show that the necessity to find an embedding of the QUBO on current D-Wave QPUs limits the problem size to under 200 buses and notably affects the time-to-solution. We finally discuss the implications on near-term implementation of QA in combination to traditional CPU or GPU based simulation.</p>
+        </div>
+        <div class="paper">
         <h2>Relevant ArXiv eess Papers - 2025-01-16</h2>
     </div>
     
