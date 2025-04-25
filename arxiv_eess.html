@@ -14,6 +14,39 @@
     <body>
     
     <div class="paper">
+        <h2>Relevant ArXiv eess Papers - 2025-04-25</h2>
+    </div>
+    
+        <div class="paper">
+            <h2>Self-Controlled Diffusion for Denoising in Scientific Imaging</h2>
+            <p><strong>Authors:</strong> Nikolay Falaleev, Nikolai Orlov</p>
+            <p>This paper presents a novel approach for denoising Electron Backscatter Diffraction (EBSD) patterns using diffusion models. We propose a two-stage training process with a UNet-based architecture, incorporating an auxiliary regression head to predict the quality of the experimental pattern and assess the progress of the denoising process. The model uses an adaptive denoising strategy, which integrates quality prediction and feedback-driven iterative denoising process control. This adaptive feedback loop allows the model to adjust its schedule, providing fine control over the denoising process. Furthermore, our model can identify samples where no meaningful signal is present, thereby reducing the risk of hallucinations. We demonstrate the successful application of diffusion models to EBSD pattern denoising using a custom-collected dataset of EBSD patterns, their corresponding master patterns, and quality values.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Are EVs Cleaner Than We Think? Evaluating Consequential Greenhouse Gas Emissions from EV Charging</h2>
+            <p><strong>Authors:</strong> Riti Bhandarkar, Qian Luo, Emil Dimanchev, Jesse D. Jenkins</p>
+            <p>While electrifying transportation eliminates tailpipe greenhouse gas (GHG) emissions, electric vehicle (EV) adoption can create additional electricity sector emissions. To quantify this emissions impact, prior work typically employs short-run marginal emissions or average emissions rates calculated from historical data or power systems models that do not consider changes in installed capacity. In this work, we use an electricity system capacity expansion model to consider the full consequential GHG emissions impact from large-scale EV adoption in the western United States, accounting for induced changes in generation and storage capacity. We find that the metrics described above do not accurately reflect the true emissions impact of EV adoption-average emissions rates can either under- or over-estimate emission impacts, and short-run marginal emissions rates can significantly underestimate emission reductions, especially when charging timing is flexible. Our results also show that using short-run marginal emission rates as signals to coordinate EV charging could increase emissions relative to price-based charging signals, indicating the need for alternative control strategies to minimize consequential emissions.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Enhancing Industrial Flexibility and Market Participation in Cement Manufacturing Through Optimized Production Scheduling</h2>
+            <p><strong>Authors:</strong> Sebastián Rojas-Innocenti, Enrique Baeyens, Alejandro Martín-Crespo, Sergio Saludes-Rodil, Fernando Frechoso-Escudero</p>
+            <p>The growing share of variable renewable energy (VRE) sources in power systems is increasing the need for short term operational flexibility, particularly from large industrial electricity consumers. This study proposes a practical, two stage optimization framework to unlock this flexibility in cement manufacturing and support participation in electricity balancing markets. In Stage 1, a mixed integer linear programming (MILP) model minimizes electricity procurement costs by optimally scheduling the raw milling subsystem. In Stage 2, a flexibility assessment model evaluates profitable deviations, targeting participation in Spain manual Frequency Restoration Reserve (mFRR) market. A real world case study in a Spanish cement plant (including PV and battery storage) shows that flexibility services can yield monthly revenues of up to 800 EUR and paybacks as short as six years. This framework offers a replicable pathway for industrial flexibility in energy intensive sectors.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Admittance Identification of Grid-Forming Inverters Using Time and Frequency-Domain Techniques</h2>
+            <p><strong>Authors:</strong> Andres Intriago, Alexandros Paspatis, Francesco Liberati, Charalambos Konstantinou</p>
+            <p>The increasing integration of inverter-based resources (IBRs) into the power grid introduces new challenges, requiring detailed electromagnetic transient (EMT) studies to analyze system interactions. Despite these needs, access to the internal firmware of power electronic devices remains restricted due to stringent nondisclosure agreements enforced by manufacturers. To address this, we explore three system identification techniques: sweep frequency response analysis (SFRA), step excitation method (SEM), and eigensystem realization algorithm (ERA). SFRA employs sinusoidal signals of varying frequencies to measure the system's frequency response, while SEM and ERA utilize step functions to derive time-domain responses and transform them into Laplace-domain transfer functions. All three approaches are shown to provide consistent results in identifying the dq admittance of grid-forming inverters (GFM) over a frequency range of 1 Hz to 100 Hz.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>On the Eigenvalue Tracking of Large-Scale Systems</h2>
+            <p><strong>Authors:</strong> Andreas Bouterakos, Joseph McKeon, Georgios Tzounas</p>
+            <p>The paper focuses on the problem of tracking eigenvalue trajectories in large-scale power system models as system parameters vary. A continuation-based formulation is presented for tracing any single eigenvalue of interest, which supports sparse matrix representations and accommodates both explicit and semi-implicit differential-algebraic models. Key implementation aspects, such as numerical integration, matrix updates, derivative approximations, and handling defective eigenvalues, are discussed in detail and practical recommendations are duly provided. The tracking approach is demonstrated through a comprehensive case study on the IEEE 39-bus system, as well as on a realistic dynamic model of the Irish transmission system.</p>
+        </div>
+        <div class="paper">
         <h2>Relevant ArXiv eess Papers - 2025-04-24</h2>
     </div>
     
@@ -2852,39 +2885,6 @@
             <p>This paper explores the solutions for minimizing renewable energy (RE) curtailment in the Texas Electric Reliability Council of Texas (ERCOT) grid. By utilizing current and future planning data from ERCOT and the System Advisor Model from the National Renewable Energy Laboratory, we examine how future renewable energy (RE) initiatives, combined with utility-scale energy storage, can reduce CO2 emissions while reshaping Texas's energy mix. The study projects the energy landscape from 2023 to 2033, considering the planned phase-out of fossil fuel plants and the integration of new wind/solar projects. By comparing emissions under different load scenarios, with and without storage, we demonstrate storage's role in optimizing RE utilization. The findings of this paper provide actionable guidance for energy stakeholders, underscoring the need to expand wind and solar projects with strategic storage solutions to maximize Texas's RE capacity and substantially reduce CO2 emissions.</p>
         </div>
         
-        <div class="paper">
-            <h2>Pseudo-Measurement Enhancement in Power Distribution Systems</h2>
-            <p><strong>Authors:</strong> Tao Xu, Kaiqi Wang, Jiadong Zhang, Ji Qiao, Zixuan Zhao, Hong Zhu, Kai Sun</p>
-            <p>With the rapid development of smart distribution networks (DNs), the integrity and accuracy of grid measurement data are crucial to the safety and stability of the entire system. However, the quality of the user power consumption data cannot be guaranteed during the collection and transmission process. To this end, this paper proposes a low-rank tensor completion model based on CANDECOMP/PARAFAC decomposition (CPD-LRTC) to enhance the quality of the measurement data of the DNs. Firstly, the causes and the associated characteristics of the missing data are analyzed, and a third-order standard tensor is constructed as a mathematical model of the measurement data of the DN. Then, a completion model is established based on the characteristics of measurement data and the low rank of the completion tensor, and the alternating direction method of multipliers (ADMM) is used to solve it iteratively. Finally, the proposed model is verified through two case studies, the completion accuracy, the computational efficiency, and the memory usage are compared to traditional methods.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Demand Forecasting for Electric Vehicle Charging Stations using Multivariate Time-Series Analysis</h2>
-            <p><strong>Authors:</strong> Saba Sanami, Hesam Mosalli, Yu Yang, Hen-Geul Yeh, Amir G. Aghdam</p>
-            <p>As the number of electric vehicles (EVs) continues to grow, the demand for charging stations is also increasing, leading to challenges such as long wait times and insufficient infrastructure. High-precision forecasting of EV charging demand is crucial for efficient station management, to address some of these challenges. This paper presents an approach to predict the charging demand at 15-minute intervals for the day ahead using a multivariate long short-term memory (LSTM) network with an attention mechanism. Additionally, the model leverages explainable AI techniques to evaluate the influence of various factors on the predictions, including weather conditions, day of the week, month, and any holiday. SHapley Additive exPlanations (SHAP) are used to quantify the contribution of each feature to the final forecast, providing deeper insights into how these factors affect prediction accuracy. As a result, the framework offers enhanced decision-making for infrastructure planning. The efficacy of the proposed method is demonstrated by simulations using the test data collected from the EV charging stations at California State University, Long Beach.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Physics-Informed Gradient Estimation for Accelerating Deep Learning based AC-OPF</h2>
-            <p><strong>Authors:</strong> Kejun Chen, Shourya Bose, Yu Zhang</p>
-            <p>The optimal power flow (OPF) problem can be rapidly and reliably solved by employing responsive online solvers based on neural networks. The dynamic nature of renewable energy generation and the variability of power grid conditions necessitate frequent neural network updates with new data instances. To address this need and reduce the time required for data preparation time, we propose a semi-supervised learning framework aided by data augmentation. In this context, ridge regression replaces the traditional solver, facilitating swift prediction of optimal solutions for the given input load demands. Additionally, to accelerate the backpropagation during training, we develop novel batch-mean gradient estimation approaches along with a reduced branch set to alleviate the complexity of gradient computation. Numerical simulations demonstrate that our neural network, equipped with the proposed gradient estimators, consistently achieves feasible and near-optimal solutions. These results underline the effectiveness of our approach for practical implementation in real-time OPF applications.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Engineering and Validating Cyber-Physical Energy Systems: Needs, Status Quo, and Research Trends</h2>
-            <p><strong>Authors:</strong> Thomas I. Strasser, Filip Pröstl Andrén</p>
-            <p>A driving force for the realization of a sustainable energy supply is the integration of renewable energy resources. Due to their stochastic generation behaviour, energy utilities are confronted with a more complex operation of the underlying power grids. Additionally, due to technology developments, controllable loads, integration with other energy sources, changing regulatory rules, and the market liberalization, the systems operation needs adaptation. Proper operational concepts and intelligent automation provide the basis to turn the existing power system into an intelligent entity, a cyber-physical energy system. The electric energy system is therefore moving from a single system to a system of systems. While reaping the benefits with new intelligent behaviors, it is expected that system-level developments, architectural concepts, advanced automation and control as well as the validation and testing will play a significantly larger role in realizing future solutions and technologies. The implementation and deployment of these complex systems of systems are associated with increasing engineering complexity resulting also in increased engineering costs. Proper engineering and validation approaches, concepts, and tools are partly missing until now. Therefore, this paper discusses and summarizes the main needs and requirements as well as the status quo in research and development related to the engineering and validation of cyber-physical energy systems. Also research trends and necessary future activities are outlined.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Evaluation of Battery Energy Storage System to Provide Virtual Transmission Service</h2>
-            <p><strong>Authors:</strong> Qiushi Wang, Xingpeng Li</p>
-            <p>An immediate need in the transmission system is to find alternative solutions that improve system operation and defer the need for new transmission lines. This study comprehensively evaluates the performance and economic benefits of short-term operation of using battery energy storage systems (BESS) as virtual transmission (VT) to promote power transfer across distant regions. Specifically, this work implements various day-ahead energy scheduling models to analyze the impact of VT on system operation cost, network congestion, model computational time, and market performance. The performance of VT is compared with three alternative network congestion mitigation methods, including building new high-voltage physical transmission lines, cost-driven battery energy storage systems, and network reconfiguration, as well as combinations of two of the aforementioned methods. The benchmark dayahead scheduling model is a traditional security-constrained unit commitment model without system upgrades or other network congestion mitigation. Numerical simulations conducted on the IEEE 24-bus system demonstrate that VT provides a 14% operational cost reduction and 34% congested line relief compared to the base case. Compared to other examined schemes, VT is the only one comparable to physical transmission lines that can provide satisfying congestion relief and operation cost reduction without significantly sacrificing computing time and load payment.</p>
-        </div>
-        <div class="paper">
-        <h2>Relevant ArXiv eess Papers - 2025-02-24</h2>
-    </div>
-    
         
     </body>
     </html>
