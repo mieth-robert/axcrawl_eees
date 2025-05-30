@@ -14,6 +14,39 @@
     <body>
     
     <div class="paper">
+        <h2>Relevant ArXiv eess Papers - 2025-05-30</h2>
+    </div>
+    
+        <div class="paper">
+            <h2>Sensitivity of DC Network Representation for GIC Analysis</h2>
+            <p><strong>Authors:</strong> Aniruddh Mishra, Arthur K. Barnes, Jose E. Tabarez, Adam Mate</p>
+            <p>Geomagnetic disturbances are a threat to the reliability and security of our national critical energy infrastructures. These events specifically result in geomagnetically induced currents, which can cause damage to transformers due to magnetic saturation. In order to mitigate these effects, blocker devices must be placed in optimal locations. Finding this placement requires a dc representation of the ac transmission lines, which this paper discusses. Different decisions in this process, including the method of representing the blocking devices, result in significant variations to the power loss calculations. To analyze these effects, we conclude the paper by comparing the losses on a sample network with different modeling implementations.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Evaluation of Voltage Unbalance Metrics in Distribution Networks with High DER Penetration</h2>
+            <p><strong>Authors:</strong> Alireza Zabihi, Luis Badesa, Araceli Hernandez</p>
+            <p>Voltage unbalance, caused by variations in voltage magnitude and phase angle, is a significant power quality issue in three-phase systems, leading to equipment inefficiencies and increased system losses. The integration of distributed energy resources (DER) into the grid adds complexity, as DER can either reduce or worsen voltage unbalance, depending on factors such as grid configuration and the distribution of loads and DER themselves. This study explores the effects of DER penetration on voltage unbalance levels and the accuracy of the different indices most commonly used to quantify this unbalance. The results highlight the varying impacts of DER on unbalance and index performance, emphasizing the need for effective strategies to assess voltage unbalance in modern distribution systems.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>PGLearn -- An Open-Source Learning Toolkit for Optimal Power Flow</h2>
+            <p><strong>Authors:</strong> Michael Klamkin, Mathieu Tanneau, Pascal Van Hentenryck</p>
+            <p>Machine Learning (ML) techniques for Optimal Power Flow (OPF) problems have recently garnered significant attention, reflecting a broader trend of leveraging ML to approximate and/or accelerate the resolution of complex optimization problems. These developments are necessitated by the increased volatility and scale in energy production for modern and future grids. However, progress in ML for OPF is hindered by the lack of standardized datasets and evaluation metrics, from generating and solving OPF instances, to training and benchmarking machine learning models. To address this challenge, this paper introduces PGLearn, a comprehensive suite of standardized datasets and evaluation tools for ML and OPF. PGLearn provides datasets that are representative of real-life operating conditions, by explicitly capturing both global and local variability in the data generation, and by, for the first time, including time series data for several large-scale systems. In addition, it supports multiple OPF formulations, including AC, DC, and second-order cone formulations. Standardized datasets are made publicly available to democratize access to this field, reduce the burden of data generation, and enable the fair comparison of various methodologies. PGLearn also includes a robust toolkit for training, evaluating, and benchmarking machine learning models for OPF, with the goal of standardizing performance evaluation across the field. By promoting open, standardized datasets and evaluation metrics, PGLearn aims at democratizing and accelerating research and innovation in machine learning applications for optimal power flow problems. Datasets are available for download at this https URL.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Constraints and Variables Reduction for Optimal Power Flow Using Hierarchical Graph Neural Networks with Virtual Node-Splitting</h2>
+            <p><strong>Authors:</strong> Thuan Pham, Xingpeng Li</p>
+            <p>Power system networks are often modeled as homogeneous graphs, which limits the ability of graph neural network (GNN) to capture individual generator features at the same nodes. By introducing the proposed virtual node-splitting strategy, generator-level attributes like costs, limits, and ramp rates can be fully captured by GNN models, improving GNN's learning capacity and prediction accuracy. Optimal power flow (OPF) problem is used for real-time grid operations. Limited timeframe motivates studies to create size-reduced OPF (ROPF) models to relieve the computational complexity. In this paper, with virtual node-splitting, a novel two-stage adaptive hierarchical GNN is developed to (i) predict critical lines that would be congested, and then (ii) predict base generators that would operate at the maximum capacity. This will substantially reduce the constraints and variables needed for OPF, creating the proposed ROPFLG model with reduced monitor lines and reduced generator-specific variables and constraints. Two ROPF models, ROPFL and ROPFG, with just reduced lines or generators respectively, are also implemented as additional benchmark models. Case studies show that the proposed ROPFLG consistently outperforms the benchmark full OPF (FOPF) and the other two ROPF methods, achieving significant computational time savings while reliably finding optimal solutions.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Geometry of the Feasible Output Regions of Grid-Interfacing Inverters with Current Limits</h2>
+            <p><strong>Authors:</strong> Lauren Streitmatter, Trager Joswig-Jones, Baosen Zhang</p>
+            <p>Many resources in the grid connect to power grids via programmable grid-interfacing inverters that can provide grid services and offer greater control flexibility and faster response times compared to synchronous generators. However, the current through the inverter needs to be limited to protect the semiconductor components. Existing controllers are designed using somewhat ad hoc methods, for example, by adding current limiters to preexisting control loops, which can lead to stability issues or overly conservative operations. In this paper, we study the geometry of the feasible output region of a current-limited inverter. We show that under a commonly used model, the feasible region is convex. We provide an explicit characterization of this region, which allows us to efficiently find the optimal operating points of the inverter. We demonstrate how knowing the feasible set and its convexity allows us to improve upon existing grid-forming inverters such that their steady-state currents always remain within the current magnitude limit, whereas standard grid-forming controllers can lead to instabilities and violations.</p>
+        </div>
+        <div class="paper">
         <h2>Relevant ArXiv eess Papers - 2025-05-29</h2>
     </div>
     
@@ -2810,42 +2843,6 @@
         <h2>Relevant ArXiv eess Papers - 2025-03-12</h2>
     </div>
     
-        <div class="paper">
-            <h2>Short-Term Load Forecasting for AI-Data Center</h2>
-            <p><strong>Authors:</strong> Mariam Mughees, Yuzhuo Li, Yize Chen, Yunwei Ryan Li</p>
-            <p>Recent research shows large-scale AI-centric data centers could experience rapid fluctuations in power demand due to varying computation loads, such as sudden spikes from inference or interruption of training large language models (LLMs). As a consequence, such huge and fluctuating power demand pose significant challenges to both data center and power utility operation. Accurate short-term power forecasting allows data centers and utilities to dynamically allocate resources and power large computing clusters as required. However, due to the complex data center power usage patterns and the black-box nature of the underlying AI algorithms running in data centers, explicit modeling of AI-data center is quite challenging. Alternatively, to deal with this emerging load forecasting problem, we propose a data-driven workflow to model and predict the short-term electricity load in an AI-data center, and such workflow is compatible with learning-based algorithms such as LSTM, GRU, 1D-CNN. We validate our framework, which achieves decent accuracy on data center GPU short-term power consumption. This provides opportunity for improved power management and sustainable data center operations.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Real-Time Line Parameter Estimation Method for Multi-Phase Unbalanced Distribution Networks</h2>
-            <p><strong>Authors:</strong> Sakirat Wolly, Xiaozhe Wang</p>
-            <p>An accurate distribution network model is crucial for monitoring, state estimation and energy management. However, existing data-driven methods often struggle with scalability or impose a heavy computational burden on large distribution networks. In this paper, leveraging natural load dynamics, we propose a two-stage line estimation method for multiphase unbalanced distribution networks. Simulation results using real-life load and PV data show that the proposed method reduces computational time by one to two orders of magnitude compared to existing methods.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Co-Optimizing Distributed Energy Resources under Demand Charges and Bi-Directional Power Flow</h2>
-            <p><strong>Authors:</strong> Ruixiao Yang, Gulai Shen, Ahmed S. Alahmed, Chuchu Fan</p>
-            <p>We address the co-optimization of behind-the-meter (BTM) distributed energy resources (DER), including flexible demands, renewable distributed generation (DG), and battery energy storage systems (BESS) under net energy metering (NEM) frameworks with demand charges. We formulate the problem as a stochastic dynamic program that accounts for renewable generation uncertainty and operational surplus maximization. Our theoretical analysis reveals that the optimal policy follows a threshold structure. Finally, we show that even a simple algorithm leveraging this threshold structure performs well in simulation, emphasizing its importance in developing near-optimal algorithms. These findings provide crucial insights for implementing prosumer energy management systems under complex tariff structures.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Decentralized Integration of Grid Edge Resources into Wholesale Electricity Markets via Mean-field Games</h2>
-            <p><strong>Authors:</strong> Chen Feng, Andrew L. Liu</p>
-            <p>Grid edge resources refer to distributed energy resources (DERs) located on the consumer side of the electrical grid, controlled by consumers rather than utility companies. Integrating DERs with real-time electricity pricing can better align distributed supply with system demand, improving grid efficiency and reliability. However, DER owners, known as prosumers, often lack the expertise and resources to directly participate in wholesale energy markets, limiting their ability to fully realize the economic potential of their assets. Meanwhile, as DER adoption grows, the number of prosumers participating in the energy system is expected to increase significantly, creating additional challenges in coordination and market participation. To address these challenges, we propose a mean-field game framework that enables prosumers to autonomously learn optimal decision policies based on dynamic market prices and their variable solar generation. Our framework is designed to accommodate heterogeneous agents and demonstrates the existence of a mean-field equilibrium (MFE) in a wholesale energy market with many prosumers. Additionally, we introduce an algorithm that automates prosumers' resource control, facilitating real-time decision-making for energy storage management. Numerical experiments suggest that our approach converges towards an MFE and effectively reduces peak loads and price volatility, especially during periods of external demand or supply shocks. This study highlights the potential of a fully decentralized approach to integrating DERs into wholesale markets while improving market efficiency.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Integrated Energy Management for Operational Cost Optimization in Community Microgrids</h2>
-            <p><strong>Authors:</strong> Moslem Uddin, Huadong Mo, Daoyi Dong</p>
-            <p>This study presents an integrated energy management strategy for cost optimization in multi-energy community microgrids (MGs). The proposed approach combines storage-based peak shaving, economic dispatch of diesel generators, and efficient utilization of renewable energy sources to enhance energy management in community MGs. The efficacy of the energy management system (EMS) was validated through a simulation case study for a rural Australian community. The results demonstrate that the proposed EMS effectively reduces the peak energy demand by up to 43%, lowers operational costs by 84.63% (from $189,939/year to $29,188/year), and achieves a renewable energy utilization of 92.3%, up from 47.8% in the base system. Furthermore, the levelized cost of energy was reduced by 14.21% to $0.163/kWh. The strategy ensures an uninterrupted power supply during grid outages by utilizing DGs and battery energy storage systems. The environmental benefits included a 196.4% reduction in CO2 emissions and 100% reductions in CO, unburned hydrocarbons, and particulate matter. These findings validate the feasibility of the proposed EMS in achieving cost-effective, reliable, and sustainable energy management in community MGs. These findings contribute to the field by introducing a novel approach and demonstrating the practical feasibility of multi-energy MGs.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Electrifying Heavy-Duty Trucks: Battery-Swapping vs Fast Charging</h2>
-            <p><strong>Authors:</strong> Ruiting Wang, Antoine Martinez, Zaid Allybokus, Wente Zeng, Nicolas Obrecht, Scott Moura</p>
-            <p>The advantages and disadvantages of Battery Swapping Stations (BSS) for heavy-duty trucks are poorly understood, relative to Fast Charging Stations (FCS) systems. This study evaluates these two charging mechanisms for electric heavy-duty trucks, aiming to compare the systems' efficiency and identify the optimal design for each option. A model was developed to address the planning and operation of BSS in a charging network, considering in-station batteries as assets for various services. We assess performance metrics including transportation efficiency and battery utilization efficiency. Our evaluation reveals that BSS significantly increased transportation efficiency by reducing vehicle downtime compared to fast charging, but may require more batteries. BSS with medium-sized batteries offers improved transportation efficiency in terms of time and labor. FCS-reliant trucks require larger batteries to compensate for extended charging times. To understand the trade-off between these two metrics, a cost-benefit analysis was performed under different scenarios involving potential shifts in battery prices and labor costs. Additionally, BSS shows potential for significant $\text{CO}_2$ emission reductions and increased profitability through energy arbitrage and grid ancillary services. These findings emphasize the importance of integrating BSS into future electric truck charging networks and adopting carbon-aware operational frameworks.</p>
-        </div>
-        
         
     </body>
     </html>
