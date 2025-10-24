@@ -14,6 +14,45 @@
     <body>
     
     <div class="paper">
+        <h2>Relevant ArXiv eess Papers - 2025-10-24</h2>
+    </div>
+    
+        <div class="paper">
+            <h2>Approximate Model Predictive Control for Microgrid Energy Management via Imitation Learning</h2>
+            <p><strong>Authors:</strong> Changrui Liu, Shengling Shi, Anil Alan, Ganesh Kumar Venayagamoorthy, Bart De Schutter</p>
+            <p>Efficient energy management is essential for reliable and sustainable microgrid operation amid increasing renewable integration. This paper proposes an imitation learning-based framework to approximate mixed-integer Economic Model Predictive Control (EMPC) for microgrid energy management. The proposed method trains a neural network to imitate expert EMPC control actions from offline trajectories, enabling fast, real-time decision making without solving optimization problems online. To enhance robustness and generalization, the learning process includes noise injection during training to mitigate distribution shift and explicitly incorporates forecast uncertainty in renewable generation and demand. Simulation results demonstrate that the learned policy achieves economic performance comparable to EMPC while only requiring $10\%$ of the computation time of optimization-based EMPC in practice.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Multi-layer Optimized Coordination of Smart Building Resources in Active Power Distribution Systems</h2>
+            <p><strong>Authors:</strong> Mohammadali Rostami, Saeed Lotfifard, Mladen Kezunovic</p>
+            <p>This paper proposes a multi-actor coordination platform for the optimal utilization of smart buildings resources, including roof top PV generation and battery energy storage system (BESS), in active power distribution systems. The proposed multi-actor coordination includes the Smart Building Coordinator (SBC), Micro-Grid Coordinator (MGC) and Distribution System Coordinator (DSC). The coordinators operate independently and only exchange limited information with each other to reach an optimal solution. In the proposed platform, a hierarchical optimization problem is solved to optimally determine the operating point of all distribution system resources. The proposed platform fully preserves the confidentiality of the behind the meter (BTM) data of the buildings since no information about the status of the PV system, BESS, and load of the building is shared with the owner of the power system. The proposed platform has a flexible and scalable architecture where the computational task of coordinating microgrids and smart buildings with distribution grid is performed locally at the MGC and SBC layers, respectively. Numerical simulations show the efficacy of the proposed platform in coordinating the BTM resources with the rest of the distribution system.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>On MIMO Stability Analysis Methods Applied to Inverter-Based Resources Connected to Power Systems</h2>
+            <p><strong>Authors:</strong> Anton A. Stoorvogel, Saeed Lotfifard, Ali Saberi</p>
+            <p>This paper presents a critical review of methods commonly employed in the literature for small signal stability analysis of inverter based resources (IBRs). It discusses the intended purposes of these methods and outlines both their proper and improper implementations. The paper provides insights into the applicability of these techniques, clarifies their inherent limitations, and discusses and illustrates common sources of misinterpretation.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Decentralized Small Gain and Phase Stability Conditions for Grid-Forming Converters: Limitations and Extensions</h2>
+            <p><strong>Authors:</strong> Diego Cifelli, Adolfo Anta</p>
+            <p>The increasing share of converter based resources in power systems calls for scalable methods to analyse stability without relying on exhaustive system wide simulations. Decentralized small gain and small-phase criteria have recently been proposed for this purpose, but their applicability to grid forming converters is severely limited by the sectoriality assumption, which is not typically satisfied at low frequencies. This work revisits and extends mixed gain phase conditions by introducing loop shaping transformations that reformulate converter and network models in alternative coordinate frames. The proposed approach resolves intrinsic non sectoriality at low frequencies and reduces conservativeness, thereby improving the applicability of decentralized stability certification. Analytical results are illustrated using an infinite bus system first and then extended to the IEEE 14 bus network, demonstrating the practicality and scalability of the method. These findings provide a pathway toward less conservative and more widely applicable decentralized stability certificates in power grids.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Learning Optimal Power Flow with Pointwise Constraints</h2>
+            <p><strong>Authors:</strong> Damian Owerko, Anna Scaglione, Alejandro Ribeiro</p>
+            <p>Training learning parameterizations to solve optimal power flow (OPF) with pointwise constraints is proposed. In this novel training approach, a learning parameterization is substituted directly into an OPF problem with constraints required to hold over all problem instances. This is different from existing supervised learning methods in which constraints are required to hold across the average of problem instances. Training with pointwise constraints is undertaken in the dual domain with the use of augmented Lagrangian and dual gradient ascent algorithm. Numerical experiments demonstrate that training with pointwise constraints produces solutions with smaller constraint violations. Experiments further demonstrated that pointwise constraints are most effective at reducing constraint violations in corner cases - defined as those realizations in which constraints are most difficult to satisfy. Gains are most pronounced in power systems with large numbers of buses.</p>
+        </div>
+        
+        <div class="paper">
+            <h2>Benchmarking Reasoning Reliability in Artificial Intelligence Models for Energy-System Analysis</h2>
+            <p><strong>Authors:</strong> Eliseo Curcio</p>
+            <p>Artificial intelligence and machine learning are increasingly used for forecasting, optimization, and policy design in the energy sector, yet no standardized framework exists to evaluate whether these systems reason correctly. Current validation practices focus on predictive accuracy or computational efficiency, leaving the logical integrity of analytical conclusions untested. This study introduces the Analytical Reliability Benchmark (ARB), a reproducible framework that quantifies reasoning reliability in large language models applied to energy system analysis. The benchmark integrates five submetrics: accuracy, reasoning reliability, uncertainty discipline, policy consistency, and transparency, and evaluates model performance across deterministic, probabilistic, and epistemic scenarios using open technoeconomic datasets (NREL ATB 2024, DOE H2A/H2New, IEA WEO 2024). Four frontier models (GPT-4/5, Claude 4.5 Sonnet, Gemini 2.5 Pro, Llama 3 70B) were tested under identical factual and regulatory conditions. Results show that reasoning reliability can be objectively measured. GPT-4/5 and Claude 4.5 Sonnet achieved consistent and policy-compliant reasoning (Analytical Reliability Index greater than 90), Gemini 2.5 Pro demonstrated moderate stability, and Llama 3 70B remained below professional thresholds. Statistical validation confirmed that these differences are significant and reproducible. The ARB establishes the first quantitative method in the energy literature for verifying causal, probabilistic, and policy-driven reasoning in artificial intelligence systems, providing a reference framework for trustworthy and transparent analytical applications in the global energy transition.</p>
+        </div>
+        <div class="paper">
         <h2>Relevant ArXiv eess Papers - 2025-10-23</h2>
     </div>
     
@@ -2865,45 +2904,6 @@
             <h2>Coordinating Distributed Energy Resources with Nodal Pricing in Distribution Networks: a Game-Theoretic Approach</h2>
             <p><strong>Authors:</strong> Eli Brock, Jingqi Li, Javad Lavaei, Somayeh Sojoudi</p>
             <p>We propose a real-time nodal pricing mechanism for cost minimization and voltage control in a distribution network with autonomous distributed energy resources and analyze the resulting market using stochastic game theory. Unlike existing methods, the proposed pricing scheme does not require device-aware centralized coordination or communication between prosumers. By developing new sufficient conditions under which a stochastic game is a Markov potential game, we show that the problem of computing an equilibrium for the proposed model is equivalent to solving a single-agent Markov Decision Process. These new conditions are general and may apply to other applications. We compute the equilibrium for an IEEE test system to empirically demonstrate the effectiveness of the pricing policy.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Transformer-Based Power Optimization for Max-Min Fairness in Cell-Free Massive MIMO</h2>
-            <p><strong>Authors:</strong> Irched Chafaa, Giacomo Bacci, Luca Sanguinetti</p>
-            <p>Power allocation is an important task in wireless communication networks. Classical optimization algorithms and deep learning methods, while effective in small and static scenarios, become either computationally demanding or unsuitable for large and dynamic networks with varying user loads. This letter explores the potential of transformer-based deep learning models to address these challenges. We propose a transformer neural network to jointly predict optimal uplink and downlink power using only user and access point positions. The max-min fairness problem in cell-free massive multiple input multiple output systems is considered. Numerical results show that the trained model provides near-optimal performance and adapts to varying numbers of users and access points without retraining, additional processing, or updating its neural network architecture. This demonstrates the effectiveness of the proposed model in achieving robust and flexible power allocation for dynamic networks.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Learning AC Power Flow Solutions using a Data-Dependent Variational Quantum Circuit</h2>
-            <p><strong>Authors:</strong> Thinh Viet Le, Md Obaidur Rahman, Vassilis Kekatos</p>
-            <p>Interconnection studies require solving numerous instances of the AC load or power flow (AC PF) problem to simulate diverse scenarios as power systems navigate the ongoing energy transition. To expedite such studies, this work leverages recent advances in quantum computing to find or predict AC PF solutions using a variational quantum circuit (VQC). VQCs are trainable models that run on modern-day noisy intermediate-scale quantum (NISQ) hardware to accomplish elaborate optimization and machine learning (ML) tasks. Our first contribution is to pose a single instance of the AC PF as a nonlinear least-squares fit over the VQC trainable parameters (weights) and solve it using a hybrid classical/quantum computing approach. The second contribution is to feed PF specifications as features into a data-embedded VQC and train the resultant quantum ML (QML) model to predict general PF solutions. The third contribution is to develop a novel protocol to efficiently measure AC-PF quantum observables by exploiting the graph structure of a power network. Preliminary numerical tests indicate that the proposed VQC models attain enhanced prediction performance over a deep neural network despite using much fewer weights. The proposed quantum AC-PF framework sets the foundations for addressing more elaborate grid tasks via quantum computing.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Coordinating Distributed Energy Resources with Nodal Pricing in Distribution Networks: a Game-Theoretic Approach</h2>
-            <p><strong>Authors:</strong> Eli Brock, Jingqi Li, Javad Lavaei, Somayeh Sojoudi</p>
-            <p>We propose a real-time nodal pricing mechanism for cost minimization and voltage control in a distribution network with autonomous distributed energy resources and analyze the resulting market using stochastic game theory. Unlike existing methods, the proposed pricing scheme does not require device-aware centralized coordination or communication between prosumers. By developing new sufficient conditions under which a stochastic game is a Markov potential game, we show that the problem of computing an equilibrium for the proposed model is equivalent to solving a single-agent Markov Decision Process. These new conditions are general and may apply to other applications. We compute the equilibrium for an IEEE test system to empirically demonstrate the effectiveness of the pricing policy.</p>
-        </div>
-        <div class="paper">
-        <h2>Relevant ArXiv eess Papers - 2025-09-03</h2>
-    </div>
-    
-        <div class="paper">
-            <h2>Supervision of a Photovoltaic/Batteries System for Stand Alone Applications</h2>
-            <p><strong>Authors:</strong> Djamila Rekioua (LTII), Saloua Belaid (LTII), Pierre-Olivier Logerais (CERTES EA 3481), Toufik Rekioua (LTII), Zahra Mokrani (LTII), Khoudir Kakouche (LTII), Adel Oubelaid (LTII), Faika Zaouche (LTII)</p>
-            <p>Our paper is focused on optimal and control of an isolated photovoltaic system with batteries. The control is made by the application of a power management control (PMC). Batteries are kept safe from deep discharges and overloads by the PMC, maintaining a continuous supply to the load. The ease, with which this method can be implemented, as well as its effectiveness without imposing a large computing strain on the user, is noteworthy. The batteries and PV panels in the system under study are connected to a bidirectional converter enabling the batteries to be charged and drained in accordance with weather conditions. The simulation results, clearly highlight good performance of the proposed control across two different profiles.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Optimized Renewable Energy Planning MDP for Socially-Equitable Electricity Coverage in the US</h2>
-            <p><strong>Authors:</strong> Riya Kinnarkar, Mansur Arief</p>
-            <p>Traditional power grid infrastructure presents significant barriers to renewable energy integration and perpetuates energy access inequities, with low-income communities experiencing disproportionately longer power outages. This study develops a Markov Decision Process (MDP) framework to optimize renewable energy allocation while explicitly addressing social equity concerns in electricity distribution. The model incorporates budget constraints, energy demand variability, and social vulnerability indicators across eight major U.S. cities to evaluate policy alternatives for equitable clean energy transitions. Numerical experiments compare the MDP-based approach against baseline policies including random allocation, greedy renewable expansion, and expert heuristics. Results demonstrate that equity-focused optimization can achieve 32.9% renewable energy penetration while reducing underserved low-income populations by 55% compared to conventional approaches. The expert policy achieved the highest reward, while the Monte Carlo Tree Search baseline provided competitive performance with significantly lower budget utilization, demonstrating that fair distribution of clean energy resources is achievable without sacrificing overall system performance and providing ways for integrating social equity considerations with climate goals and inclusive access to clean power infrastructure.</p>
-        </div>
-        
-        <div class="paper">
-            <h2>Comparative Techno-economic Assessment of Wind-Powered Green Hydrogen Pathways</h2>
-            <p><strong>Authors:</strong> Merlinda Andoni, Benoit Couraud, Valentin Robu, Jamie Blanche, Sonam Norbu, Si Chen, Satria Putra Kanugrahan, David Flynn</p>
-            <p>Amid global interest in resilient energy systems, green hydrogen is considered vital to the net-zero transition, yet its deployment remains limited by high production cost. The cost is determined by the its production pathway, system configuration, asset location, and interplay with electricity markets and regulatory frameworks. To compare different deployment strategies in the UK, we develop a comprehensive techno-economic framework based on the Levelised Cost of Hydrogen (LCOH) assessment. We apply this framework to 5 configurations of wind-electrolyser systems, identify the most cost-effective business cases, and conduct a sensitivity analysis of key economic parameters. Our results reveal that electricity cost is the dominant contributor to LCOH, followed by the electrolyser cost. Our work highlights the crucial role that location, market arrangements and control strategies among RES and hydrogen investors play in the economic feasibility of deploying green hydrogen systems. Policies that subsidise low-cost electricity access and optimise deployment can lower LCOH, enhancing the economic competitiveness of green hydrogen.</p>
         </div>
         
         
